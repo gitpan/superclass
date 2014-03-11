@@ -3,22 +3,20 @@ abstract: 'Like parent, but with version checks'
 author:
   - 'David Golden <dagolden@cpan.org>'
 build_requires:
-  Config: 0
-  ExtUtils::MakeMaker: 0
-  File::Find: 0
-  File::Spec::Functions: 0
-  File::Temp: 0
-  List::Util: 0
-  Test::More: 0
-  vars: 0
+  ExtUtils::MakeMaker: '0'
+  File::Spec::Functions: '0'
+  List::Util: '0'
+  Test::More: '0'
+  lib: '0'
+  vars: '0'
 configure_requires:
-  ExtUtils::MakeMaker: 6.30
+  ExtUtils::MakeMaker: '6.17'
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300029, CPAN::Meta::Converter version 2.120921'
+generated_by: 'Dist::Zilla version 5.013, CPAN::Meta::Converter version 2.140640'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
-  version: 1.4
+  version: '1.4'
 name: superclass
 no_index:
   directory:
@@ -31,15 +29,16 @@ no_index:
 provides:
   superclass:
     file: lib/superclass.pm
-    version: 0.002
+    version: '0.003'
 requires:
-  Module::Load: 0.24
-  perl: 5.008001
-  strict: 0
-  version: 0.9901
-  warnings: 0
+  Module::Load: '0.24'
+  perl: '5.008001'
+  strict: '0'
+  version: '0.9901'
+  warnings: '0'
 resources:
   bugtracker: https://github.com/dagolden/superclass/issues
-  homepage: https://metacpan.org/release/superclass
-  repository: git://github.com/dagolden/superclass.git
-version: 0.002
+  homepage: https://github.com/dagolden/superclass
+  repository: https://github.com/dagolden/superclass.git
+version: '0.003'
+x_authority: cpan:DAGOLDEN

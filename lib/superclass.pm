@@ -4,7 +4,7 @@ use warnings;
 
 package superclass;
 # ABSTRACT: Like parent, but with version checks
-our $VERSION = '0.002'; # VERSION
+our $VERSION = '0.003'; # VERSION
 
 use version 0.9901; # sane UNIVERSAL::VERSION, more or less
 use Module::Load 0.24 (); # apostrophe support
@@ -30,7 +30,7 @@ sub import {
             warn "Class '$inheritor' tried to inherit from itself\n";
         }
         Module::Load::load($module) unless $no_require; # dies if not found
-        $module->VERSION($version) if $version; # don't check '0'
+        $module->VERSION($version) if $version;         # don't check '0'
         {
             no strict 'refs';
             push @{"$inheritor\::ISA"}, $module;
@@ -42,13 +42,15 @@ sub import {
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 superclass - Like parent, but with version checks
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 SYNOPSIS
 
@@ -95,8 +97,6 @@ or a differently named file:
 
 =for Pod::Coverage method_names_here
 
-=encoding utf8
-
 =head1 DIAGNOSTICS
 
 =over 4
@@ -136,7 +136,7 @@ public review and contribution under the terms of the license.
 
 L<https://github.com/dagolden/superclass>
 
-  git clone git://github.com/dagolden/superclass.git
+  git clone https://github.com/dagolden/superclass.git
 
 =head1 AUTHOR
 

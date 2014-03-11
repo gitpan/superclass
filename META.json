@@ -4,7 +4,7 @@
       "David Golden <dagolden@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300029, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Dist::Zilla version 5.013, CPAN::Meta::Converter version 2.140640",
    "license" : [
       "perl_5"
    ],
@@ -27,13 +27,21 @@
    "prereqs" : {
       "configure" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : "6.30"
+            "ExtUtils::MakeMaker" : "6.17"
          }
       },
       "develop" : {
          "requires" : {
+            "Dist::Zilla" : "5.013",
+            "Dist::Zilla::Plugin::RemovePrereqs" : "0",
+            "Dist::Zilla::PluginBundle::DAGOLDEN" : "0.060",
+            "File::Spec" : "0",
+            "File::Temp" : "0",
+            "IO::Handle" : "0",
+            "IPC::Open3" : "0",
             "Pod::Coverage::TrustPod" : "0",
             "Test::CPAN::Meta" : "0",
+            "Test::More" : "0",
             "Test::Pod" : "1.41",
             "Test::Pod::Coverage" : "1.08"
          }
@@ -48,14 +56,16 @@
          }
       },
       "test" : {
+         "recommends" : {
+            "CPAN::Meta" : "0",
+            "CPAN::Meta::Requirements" : "2.120900"
+         },
          "requires" : {
-            "Config" : "0",
             "ExtUtils::MakeMaker" : "0",
-            "File::Find" : "0",
             "File::Spec::Functions" : "0",
-            "File::Temp" : "0",
             "List::Util" : "0",
             "Test::More" : "0",
+            "lib" : "0",
             "vars" : "0"
          }
       }
@@ -63,7 +73,7 @@
    "provides" : {
       "superclass" : {
          "file" : "lib/superclass.pm",
-         "version" : "0.002"
+         "version" : "0.003"
       }
    },
    "release_status" : "stable",
@@ -71,13 +81,14 @@
       "bugtracker" : {
          "web" : "https://github.com/dagolden/superclass/issues"
       },
-      "homepage" : "https://metacpan.org/release/superclass",
+      "homepage" : "https://github.com/dagolden/superclass",
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/dagolden/superclass.git",
+         "url" : "https://github.com/dagolden/superclass.git",
          "web" : "https://github.com/dagolden/superclass"
       }
    },
-   "version" : "0.002"
+   "version" : "0.003",
+   "x_authority" : "cpan:DAGOLDEN"
 }
 
